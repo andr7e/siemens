@@ -576,8 +576,6 @@ void PrevStation (){
 
 void readLastFreq ()
 {
-    //SetFreq (CFG_LAST_FREQ);
-
     char tmp[MAX_PATH_LEN];
     sprintf (tmp, "%s\\%s", GetCurDir(), RADIO_CFG_STRING);
 
@@ -601,30 +599,10 @@ void readLastFreq ()
 
         fclose (fd);
     }
-
-/*
-    std::ifstream in;
-
-    in.open (tmp);
-
-    if (in)
-    {
-        int freq = 0;
-        //in >> freq;
-        in.close ();
-
-        SetFreq (freq);
-    }*/
 }
 
 void writeLastFreq ()
 {
-    //std::ofstream out;
-    /*
-    unsigned int *ptr = (unsigned int *)&CFG_LAST_FREQ;
-    *ptr = GetCurFreq ();
-    */
-
     char tmp[MAX_PATH_LEN];
     sprintf (tmp, "%s\\%s", GetCurDir(), RADIO_CFG_STRING);
 
